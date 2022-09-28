@@ -1,0 +1,256 @@
+// COLORS
+$color--pink: #F900A8;
+$color--darkblue: #13142A;
+$color--lightblue: #009CF3;
+$color--yellow: #FFD400;
+$color--white: #ffffff;
+$color--black: #000000;
+$color--purple: #B457FD;
+
+// FONT SIZES
+$h1FontSize: 4.209rem;
+$h2FontSize: 3.157rem;
+$h3FontSize: 2.369rem;
+$h4FontSize: 1.777rem;
+$h5FontSize: 1.333rem;
+$bodyFontSize: 1rem;
+$body2FontSize: 0.75rem;
+$captionFontSize: 0.563rem;
+$caption2FontSize: 0.422rem;
+
+// FONT WEIGHT
+$h1FontWeight: 900;
+$h2FontWeight: 800;
+$h3FontWeight: 700;
+$h4FontWeight: 600;
+$h5FontWeight: 500;
+$bodyFontWeight: 400;
+$body2FontWeight: 400;
+$captionFontWeight: 400;
+$caption2FontWeight: 400;
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    button {
+        border: none;
+        background: none;
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+    }
+}
+
+.navbar {
+    position: relative;
+    background-color: $color--pink;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2.5rem;
+    &__group {
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: $body2FontSize;
+        font-weight: $h3FontWeight;
+        a {
+            text-decoration: none;
+        }
+        &-logo {
+            margin-right: 1rem;
+            transform: scale(0.7);
+        }
+        &-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            &-link {
+                color: $color--white;
+                &:hover {
+                    text-decoration: none;
+                    color: $color--yellow;
+                }
+                &--active {
+                    color: $color--yellow;
+                    &:hover {
+                        text-decoration: none;
+                        color: $color--yellow;
+                    }
+                }
+            }
+        }
+        &-button {
+            display: flex;
+            gap: 0.6rem;
+            background-color: $color--white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 0.5rem;
+            &-text {
+                color: $color--black;
+                font-weight: $h3FontWeight;
+                text-transform: uppercase;
+            }
+        }
+        &-dropdown {
+            display: none;
+        }
+        &-hamburger {
+            display: none;
+            &-button {
+                color: $color--white;
+                font-size: $h4FontSize;
+            }
+        }
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color--darkblue;
+    padding: 2rem;
+    gap: 2.5rem;
+    min-height: 100vh;
+    &__header {
+        &-logo {
+            transform: scale(0.8);
+        }
+        &-title {
+            color: $color--white;
+            text-align: center;
+            font-size: $h4FontSize;
+            font-weight: $h4FontWeight;
+        }
+    }
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        &-row {
+            display: flex;
+            gap: 2rem;
+            &-card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: $color--yellow;
+                padding: 2rem 1.5rem;
+                border-radius: 0.5rem;
+                &-group {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    &-image {
+                        width: 200px;
+                        clip-path: circle();
+                    }
+                    &-title {
+                        margin-top: 1rem;
+                        color: $color--black;
+                        font-size: $h5FontSize;
+                        font-weight: $h3FontWeight;
+                    }
+                    &-description {
+                        margin-bottom: 1rem;
+                        color: $color--black;
+                        font-size: $body2FontSize;
+                    }
+                    &-buttons {
+                        display: flex;
+                        justify-content: center;
+                        gap: 0.5rem;
+                        &-button {
+                            padding: 0.3rem 0.5rem;
+                            border-radius: 0.3rem;
+                            color: $color--white;
+                            &--edit {
+                                background-color: $color--purple;
+                            }
+                            &--delete {
+                                background-color: $color--pink;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    padding: 1rem 2.5rem;
+    justify-content: space-between;
+    background-color: $color--lightblue;
+    &__text {
+        color: $color--white;
+        font-size: $bodyFontSize;
+        font-weight: $h5FontWeight;
+        text-align: center;
+    }
+    &__buttons {
+        display: flex;
+        gap: 0.5rem;
+        a {
+            color: $color--white;
+        }
+    }
+}
+
+.btn {
+    &--submit {
+        background-color: $color--darkblue;
+        color: $color--white;
+    }
+    &--close {
+        color: $color--darkblue;
+        border: 1px solid $color--darkblue !important;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        &__text {
+            font-size: $body2FontSize;
+        }
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    .content {
+        &__cards{
+            &-row {
+                flex-direction: column;
+                position: relative;
+                &-card {
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 714px) {
+    .navbar {
+        &__group {
+            &-links {
+                display: none; 
+            }
+            &-button {
+                display: none;
+            }
+            &-dropdown {
+                display: block;
+            }
+            &-hamburger {
+                display: block;
+            }
+        }
+    }
+}
