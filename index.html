@@ -1,206 +1,77 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My Webpage</title>
-        <link rel="stylesheet" href="index.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://kit.fontawesome.com/c4421f4e69.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/index.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </head>
+
     <body>
+        
         <div class="navbar">
             <div class="navbar__group">
-                <div class="navbar__group-logo">
-                    <img class="navbar__group-logo-image" src="../public/images/SysDev Code Camp LogoType 2.png" alt="SysDev Code Camp LogoType 2">
-                </div>
-                <ul class="navbar__group-links">
-                    <li><a class="navbar__group-links-link--active" href="#">Home</a></li>
-                    <li><a class="navbar__group-links-link" href="#">About</a></li>
-                    <li><a class="navbar__group-links-link" href="#">Contact</a></li>
+                <img class="navbar__image" src="/public/images/SysDev Code Camp LogoType 2.png" alt="SysDev Code Camp LogoType 2">
+                <ul class="navbar__menu">
+                    <li class="navbar__link navbar__link--active"><a href="#">Home</a></li>
+                    <li class="navbar__link"><a href="#">About</a></li>
+                    <li class="navbar__link"><a href="#">Contact</a></li>
                 </ul>
             </div>
             <div class="navbar__group">
-                <button class="navbar__group-button" data-toggle="modal" data-target="#newMemberModal">
-                    <div class="navbar__group-button-icon"> 
+                <button class="regular-button regular-button--add" data-toggle="modal" data-target="#newMemberModal">
+                    <div class="regular-button__icon">
                         <i class="fa-solid fa-plus"></i>
                     </div>
-                    <div class="navbar__group-button-text">
+                    <div class="regular-button__text">
                         New Member
                     </div>
                 </button>
             </div>
-            <div class="navbar__group navbar__group-dropdown">
-                <ul class="navbar__group-links">
-                    <li><a class="navbar__group-links-link--active" href="#">Home</a></li>
-                    <li><a class="navbar__group-links-link" href="#">About</a></li>
-                    <li><a class="navbar__group-links-link" href="#">Contact</a></li>
-                </ul>
-            </div>
-            <div class="navbar__group navbar__group-hamburger">
-                <a class="navbar__group--hamburger-button">
-                    <i class="fa-solid fa-bars"></i>
-                </a>
-            </div>
         </div>
         <div class="content">
             <div class="content__header">
-                <div class="content__header-logo">
-                    <img src="../public/images/SysDev LogoType.png" alt="SysDev LogoType">
-                </div>
-                <div class="content__header-title">
+                <img class="content__image" src="/public/images/SysDev LogoType.png" alt="">
+                <div class="content__title">
                     Members Masterlist
                 </div>
             </div>
-            <div class="content__cards">
-                <div class="content__cards-row">
-                    <div class="content__cards-row-card">
-                        <div class="content__cards-row-card-group">
-                            <img class="content__cards-row-card-group-image" src="../public/images/man.jpg" alt="Member">
+            <div class="content__cards-container">
+                <div class="member-card">
+                    <img src="/public/images/man.jpg" alt="" class="member-card__image">
+                    <div class="member-card__text">
+                        <div class="member-card__name">
+                            Lorem Ipsum
                         </div>
-                        <div class="content__cards-row-card-group">
-                            <div class="content__cards-row-card-group-title">
-                                Lorem Ipsum
-                            </div>
-                            <div class="content__cards-row-card-group-description">
-                                Dolor Sit Amet
-                            </div>
-                            <div class="content__cards-row-card-group-buttons">
-                                <button class="content__cards-row-card-group-buttons-button content__cards-row-card-group-buttons-button--edit" data-toggle="modal" data-target="#editMemberModal">
-                                    <i class="fa-solid fa-pen-to-square"></i>
-                                </button>
-                                <button class="content__cards-row-card-group-buttons-button content__cards-row-card-group-buttons-button--delete" data-toggle="modal" data-target="#deleteMemberModal">
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
-                            </div>
+                        <div class="member-card__description">
+                            Dolor Sit Amet
                         </div>
                     </div>
-                    <div class="content__cards-row-card">
-                        <div class="content__cards-row-card-group">
-                            <img class="content__cards-row-card-group-image" src="../public/images/man.jpg" alt="Member">
-                        </div>
-                        <div class="content__cards-row-card-group">
-                            <div class="content__cards-row-card-group-title">
-                                Lorem Ipsum
-                            </div>
-                            <div class="content__cards-row-card-group-description">
-                                Dolor Sit Amet
-                            </div>
-                            <div class="content__cards-row-card-group-buttons">
-                                <button class="content__cards-row-card-group-buttons-button content__cards-row-card-group-buttons-button--edit" data-toggle="modal" data-target="#editMemberModal">
-                                    <i class="fa-solid fa-pen-to-square"></i>
-                                </button>
-                                <button class="content__cards-row-card-group-buttons-button content__cards-row-card-group-buttons-button--delete" data-toggle="modal" data-target="#deleteMemberModal">
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content__cards-row-card">
-                        <div class="content__cards-row-card-group">
-                            <img class="content__cards-row-card-group-image" src="../public/images/man.jpg" alt="Member">
-                        </div>
-                        <div class="content__cards-row-card-group">
-                            <div class="content__cards-row-card-group-title">
-                                Lorem Ipsum
-                            </div>
-                            <div class="content__cards-row-card-group-description">
-                                Dolor Sit Amet
-                            </div>
-                            <div class="content__cards-row-card-group-buttons">
-                                <button class="content__cards-row-card-group-buttons-button content__cards-row-card-group-buttons-button--edit" data-toggle="modal" data-target="#editMemberModal">
-                                    <i class="fa-solid fa-pen-to-square"></i>
-                                </button>
-                                <button class="content__cards-row-card-group-buttons-button content__cards-row-card-group-buttons-button--delete" data-toggle="modal" data-target="#deleteMemberModal">
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="content__cards-row">
-                    <div class="content__cards-row-card">
-                        <div class="content__cards-row-card-group">
-                            <img class="content__cards-row-card-group-image" src="../public/images/man.jpg" alt="Member">
-                        </div>
-                        <div class="content__cards-row-card-group">
-                            <div class="content__cards-row-card-group-title">
-                                Lorem Ipsum
-                            </div>
-                            <div class="content__cards-row-card-group-description">
-                                Dolor Sit Amet
-                            </div>
-                            <div class="content__cards-row-card-group-buttons">
-                                <button class="content__cards-row-card-group-buttons-button content__cards-row-card-group-buttons-button--edit" data-toggle="modal" data-target="#editMemberModal">
-                                    <i class="fa-solid fa-pen-to-square"></i>
-                                </button>
-                                <button class="content__cards-row-card-group-buttons-button content__cards-row-card-group-buttons-button--delete" data-toggle="modal" data-target="#deleteMemberModal">
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content__cards-row-card">
-                        <div class="content__cards-row-card-group">
-                            <img class="content__cards-row-card-group-image" src="../public/images/man.jpg" alt="Member">
-                        </div>
-                        <div class="content__cards-row-card-group">
-                            <div class="content__cards-row-card-group-title">
-                                Lorem Ipsum
-                            </div>
-                            <div class="content__cards-row-card-group-description">
-                                Dolor Sit Amet
-                            </div>
-                            <div class="content__cards-row-card-group-buttons">
-                                <button class="content__cards-row-card-group-buttons-button content__cards-row-card-group-buttons-button--edit" data-toggle="modal" data-target="#editMemberModal">
-                                    <i class="fa-solid fa-pen-to-square"></i>
-                                </button>
-                                <button class="content__cards-row-card-group-buttons-button content__cards-row-card-group-buttons-button--delete" data-toggle="modal" data-target="#deleteMemberModal">
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content__cards-row-card">
-                        <div class="content__cards-row-card-group">
-                            <img class="content__cards-row-card-group-image" src="../public/images/man.jpg" alt="Member">
-                        </div>
-                        <div class="content__cards-row-card-group">
-                            <div class="content__cards-row-card-group-title">
-                                Lorem Ipsum
-                            </div>
-                            <div class="content__cards-row-card-group-description">
-                                Dolor Sit Amet
-                            </div>
-                            <div class="content__cards-row-card-group-buttons">
-                                <button class="content__cards-row-card-group-buttons-button content__cards-row-card-group-buttons-button--edit" data-toggle="modal" data-target="#editMemberModal">
-                                    <i class="fa-solid fa-pen-to-square"></i>
-                                </button>
-                                <button class="content__cards-row-card-group-buttons-button content__cards-row-card-group-buttons-button--delete" data-toggle="modal" data-target="#deleteMemberModal">
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
-                            </div>
-                        </div>
+                    <div class="member-card__buttons-container">
+                        <button class="small-button small-button--edit" data-toggle="modal" data-target="#editMemberModal">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                        <button class="small-button small-button--delete" data-toggle="modal" data-target="#deleteMemberModal">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer">
+        <div class="footer">    
             <div class="footer__text">
                 SysDev Code Camp for Dummies 2022 | Developed by the Department of SAMAHAN Systems Development
             </div>
-            <div class="footer__buttons">
-                <a href="https://www.facebook.com/SAMAHANSysDev/"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com/SamahanSysDev/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://twitter.com/SamahanSysDev"><i class="fa-brands fa-twitter"></i></a>
+            <div class="footer__socials">
+                <a href="https://www.facebook.com/AdDUSAMAHAN/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com/addusamahan"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.instagram.com/samahan_ateneo/"><i class="fa-brands fa-twitter"></i></a>
             </div>
-        </div>
-        <!-- modals -->
+        </div> 
+
+        <!-- new member modal -->
         <div class="modal fade" id="newMemberModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -212,38 +83,38 @@
                 </div>
                 <div class="modal-body">
                     <div class="input-group mb-3">
-                        <div class="input-group-prepend">
+                      <div class="input-group-prepend">
                         <span class="input-group-text" id="inputGroup-sizing-default">First Name</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                      </div>
+                      <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3">
-                        <div class="input-group-prepend">
+                      <div class="input-group-prepend">
                         <span class="input-group-text" id="inputGroup-sizing-default">Last Name</span>
+                      </div>
+                      <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="dropdown show">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Position
+                        </a>
+                      
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <a class="dropdown-item" href="#">UI/UX</a>
+                          <a class="dropdown-item" href="#">Frontend</a>
+                          <a class="dropdown-item" href="#">Backend</a>
+                          <a class="dropdown-item" href="#">Full-stack</a>
                         </div>
-                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Role
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="#">UI/UX Developer</a>
-                              <a class="dropdown-item" href="#">Frontend Developer</a>
-                              <a class="dropdown-item" href="#">Backend Developer</a>
-                              <a class="dropdown-item" href="#">Full-stack Developer</a>
-                            </div>
-                          </div>
-                    </div>
+                      </div>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn--close" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn--submit">Add Member</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Add Member</button>
                 </div>
               </div>
             </div>
         </div>
+        <!-- edit member modal -->
         <div class="modal fade" id="editMemberModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -255,30 +126,29 @@
                 </div>
                 <div class="modal-body">
                     <div class="input-group mb-3">
-                        <div class="input-group-prepend">
+                      <div class="input-group-prepend">
                         <span class="input-group-text" id="inputGroup-sizing-default">First Name</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                      </div>
+                      <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3">
-                        <div class="input-group-prepend">
+                      <div class="input-group-prepend">
                         <span class="input-group-text" id="inputGroup-sizing-default">Last Name</span>
+                      </div>
+                      <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="dropdown show">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Position
+                        </a>
+                      
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <a class="dropdown-item" href="#">UI/UX</a>
+                          <a class="dropdown-item" href="#">Frontend</a>
+                          <a class="dropdown-item" href="#">Backend</a>
+                          <a class="dropdown-item" href="#">Full-stack</a>
                         </div>
-                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Role
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="#">UI/UX Developer</a>
-                              <a class="dropdown-item" href="#">Frontend Developer</a>
-                              <a class="dropdown-item" href="#">Backend Developer</a>
-                              <a class="dropdown-item" href="#">Full-stack Developer</a>
-                            </div>
-                          </div>
-                    </div>
+                      </div>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -287,17 +157,18 @@
               </div>
             </div>
         </div>
+        <!-- delete member modal -->
         <div class="modal fade" id="deleteMemberModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Delete Member</h5>
+                  <h5 class="modal-title" id="exampleModalLabel">Confirm Delete Member</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
-                    Confirm delete member?
+                    <p class="text">Delete Member?</p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -306,5 +177,11 @@
               </div>
             </div>
         </div>
-    </body>
-</html>
+
+        <script src="https://kit.fontawesome.com/12211a0a97.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>   
+
+</html>    
