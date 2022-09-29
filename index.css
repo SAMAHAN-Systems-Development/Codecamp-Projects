@@ -12,6 +12,9 @@ body button {
 body button:hover {
   cursor: pointer;
 }
+body a {
+  text-decoration: none !important;
+}
 
 .regular-button {
   display: flex;
@@ -145,6 +148,7 @@ body button:hover {
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
+  width: 1080px;
 }
 
 .footer {
@@ -169,4 +173,45 @@ body button:hover {
 }
 .footer__socials a:hover {
   color: #13142A;
+}
+
+@media only screen and (max-width: 500px) {
+  .regular-button__text {
+    display: none;
+  }
+  .navbar {
+    padding: 1rem !important;
+  }
+  .content__image {
+    transform: scale(0.8);
+  }
+  .content__title {
+    font-size: 1.5rem;
+  }
+  .footer {
+    gap: 1rem;
+  }
+}
+@media only screen and (max-width: 740px) {
+  .navbar__link {
+    display: none;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__text {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .content__cards-container {
+    width: 100%;
+  }
 }/*# sourceMappingURL=index.css.map */
